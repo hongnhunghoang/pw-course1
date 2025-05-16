@@ -35,11 +35,11 @@ Ignore folder folder_name/
 - console.log(`Toi la ${name}`);
 - console.log(“Toi ten la” + name+ “”)
 3. Object
-let/const <ten_object> = {<thuoc_tinh>: <gia_tri>,...}
-Trong đó:
-- <thuoc_tinh>: giống quy tắc đặt tên biến
-- <gia tri>: có kiểu giống biến, hoặc là 1 object khác.
-Ví dụ:
+- Cấu trúc: let/const <ten_object> = {<thuoc_tinh>: <gia_tri>,...}
+    - Trong đó:
+        - <thuoc_tinh>: giống quy tắc đặt tên biến
+        - <gia_tri>: có kiểu giống biến, hoặc là 1 object khác
+- Ví dụ:
 let user = {
     "name": "Nhung",
     "age": 25,
