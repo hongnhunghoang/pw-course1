@@ -26,7 +26,7 @@ convertTimeToHex(decimalTime);
 function decryptCode(code) {
     const codeSplit = code.split('');
     const newCode = codeSplit.map((item) => {
-        if(item === item.toUpperCase()){
+        if (item === item.toUpperCase()) {
             return item.toLowerCase();
         } else {
             return item.toUpperCase();
@@ -40,7 +40,7 @@ function decryptCode(code) {
     const newCodeList = [];
     const codeSplit = code.split('');
     codeSplit.forEach((item) => {
-        if(item === item.toUpperCase()){
+        if (item === item.toUpperCase()) {
             newCodeList.push(item.toLowerCase());
         } else {
             newCodeList.push(item.toUpperCase());
@@ -53,7 +53,7 @@ function decryptCode(code) {
 function decryptCode(code) {
     const codeSplit = code.split('');
     codeSplit.forEach((item, index) => {
-        if(item === item.toUpperCase()){
+        if (item === item.toUpperCase()) {
             codeSplit[index] = item.toLowerCase();
         } else {
             codeSplit[index] = item.toUpperCase();
@@ -68,7 +68,7 @@ function decryptCode(code) {
     const codeSplit = code.split('');
     for (let i = 0; i < codeSplit.length; i++) {
         let codeChar = codeSplit[i];
-        if(codeChar === codeChar.toUpperCase()){
+        if (codeChar === codeChar.toUpperCase()) {
             newCodeList.push(codeChar.toLowerCase());
         } else {
             newCodeList.push(codeChar.toUpperCase());
