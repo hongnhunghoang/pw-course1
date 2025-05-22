@@ -67,11 +67,11 @@ function decryptCode(code) {
     const newCode = [];
     const codeSplit = code.split('');
     for (let i = 0; i < codeSplit.length; i++) {
-        let codeChar = codeSplit[i];
-        if (codeChar === codeChar.toUpperCase()) {
-            newCode.push(codeChar.toLowerCase());
+        let char = codeSplit[i];
+        if (char === char.toUpperCase()) {
+            newCode.push(char.toLowerCase());
         } else {
-            newCode.push(codeChar.toUpperCase());
+            newCode.push(char.toUpperCase());
         }
     }
     return newCode.join('');
