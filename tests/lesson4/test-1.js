@@ -80,17 +80,17 @@ function decryptCode(code) {
 function decryptCode(code) {
     let newCode = "";
     for (const char of code) {
-      if (char >= 'a' && char <= 'z') {
-        newCode += char.toUpperCase();
-      } else if (char >= 'A' && char <= 'Z') {
-        newCode += char.toLowerCase();
-      } else {
-        newCode += char; 
-      }
+        if (char >= 'a' && char <= 'z') {
+            newCode += char.toUpperCase();
+        } else if (char >= 'A' && char <= 'Z') {
+            newCode += char.toLowerCase();
+        } else {
+            newCode += char;
+        }
     }
-    
+
     return newCode;
-  }
+}
 
 let code = "K14 Challenge";
 console.log(`Mật mã là : ${decryptCode(code)}`);
