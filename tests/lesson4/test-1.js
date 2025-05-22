@@ -37,26 +37,26 @@ function decryptCode(code) {
 
 //Cach 2
 function decryptCode(code) {
-    const newCodeList = [];
+    const newCode = [];
     const codeSplit = code.split('');
-    codeSplit.forEach((item) => {
-        if (item === item.toUpperCase()) {
-            newCodeList.push(item.toLowerCase());
+    codeSplit.forEach((char) => {
+        if (char === char.toUpperCase()) {
+            newCode.push(char.toLowerCase());
         } else {
-            newCodeList.push(item.toUpperCase());
+            newCode.push(char.toUpperCase());
         }
     })
-    return newCodeList.join('');
+    return newCode.join('');
 }
 
 //Cach 3
 function decryptCode(code) {
     const codeSplit = code.split('');
-    codeSplit.forEach((item, index) => {
-        if (item === item.toUpperCase()) {
-            codeSplit[index] = item.toLowerCase();
+    codeSplit.forEach((char, index) => {
+        if (char === char.toUpperCase()) {
+            codeSplit[index] = char.toLowerCase();
         } else {
-            codeSplit[index] = item.toUpperCase();
+            codeSplit[index] = char.toUpperCase();
         }
     })
     return codeSplit.join('');
@@ -64,18 +64,33 @@ function decryptCode(code) {
 
 //Cach 4
 function decryptCode(code) {
-    const newCodeList = [];
+    const newCode = [];
     const codeSplit = code.split('');
     for (let i = 0; i < codeSplit.length; i++) {
         let codeChar = codeSplit[i];
         if (codeChar === codeChar.toUpperCase()) {
-            newCodeList.push(codeChar.toLowerCase());
+            newCode.push(codeChar.toLowerCase());
         } else {
-            newCodeList.push(codeChar.toUpperCase());
+            newCode.push(codeChar.toUpperCase());
         }
     }
-    return newCodeList.join('');
+    return newCode.join('');
 };
+//Cach 5
+function decryptCode(code) {
+    let newCode = "";
+    for (const char of code) {
+      if (char >= 'a' && char <= 'z') {
+        newCode += char.toUpperCase();
+      } else if (char >= 'A' && char <= 'Z') {
+        newCode += char.toLowerCase();
+      } else {
+        newCode += char; 
+      }
+    }
+    
+    return newCode;
+  }
 
 let code = "K14 Challenge";
 console.log(`Mật mã là : ${decryptCode(code)}`);
