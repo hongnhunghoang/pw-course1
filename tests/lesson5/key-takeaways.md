@@ -61,7 +61,7 @@
             });
         }); 
 
-![Hình ảnh](tests/lesson5/ex-test-step.png)
+![Hình ảnh](tests/lesson5/tests/files/ex-test-step.png)
 
 3. Basic actions
 - Navigate: await page.goto('https://pw-practice.playwrightvn.com/');
@@ -95,9 +95,25 @@
         page.locator("//input").setChecked(false);
 
 - Select option: để chọn một tùy chọn (option) trong dropdown (thẻ <select>) => sử dụng hàm selectOption()
-    await page.selectOption('#country', 'VN');
+    await page.selectOption('//selector đến thẻ select', '//value');
 
-- Set Input File: 
+- Set Input File: để thiết lập (upload) file cho thẻ <input type="file"> => dùng hàm setInputFiles()
+    await page.setInputFiles('//input[@type="file"]', 'path/to/file.txt');
+
+- Hover: để hover vào phần tử: 
+    await page.locator("<xpath here>").hover();
+
+- text(): tìm ra phần tử có giá trị tương ứng. Ví dụ 
+Với DOM sau: 
+    <div @class=”playwright”>This is a text</div> 
+Thì để chọn phần tử này, ta dùng cú pháp như sau: 
+    //div[text()=’This is a text’] 
+
+- contains(): Đôi khi trong phần tử HTML, phần tử sẽ bị thừa khoảng trắng, hoặc có các giá trị không cố định trong text. Ví dụ:
+    <div> Tôi là Alex </div> // Text này có 1 ký tự space ở đầu và ở đuôi <div>
+=> Để chọn các phần tử này, ta dùng hàm contains(<giá trị>, <giá trị contains>). Ví dụ: 
+    //div[contains(text(), ‘Tôi là Alex’)] 
+
 
 
     
